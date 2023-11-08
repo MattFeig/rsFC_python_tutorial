@@ -53,3 +53,6 @@ def save_nii(array, output_name, output_dir_path, wb_required_template_path, pur
     subprocess.call(wb_comm, shell=True)
     if purge:
         os.remove(out_path)        
+
+
+def flatten_upper_triangle(arr): return arr[np.triu_indices_from(arr,1)]
